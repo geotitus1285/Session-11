@@ -1,0 +1,6 @@
+library(VIM)
+aggr_plot <- aggr(old_Cust_df, col=c('navyblue','red'), numbers=TRUE, sortVars=TRUE, labels=names(df), cex.axis=.7, gap=3, ylab=c("Histogram of missing data","Pattern"))
+barplot(table(bank$job),col="red",ylab="No. of Clients",las=2,main="Job",cex.names = 0.8,cex.axis = 0.8)
+barplot(counts,col=c("darkblue","red"),legend = rownames(counts), main = "Term Deposit")
+logit_model <- glm(y ~.,family=binomial(link='logit'),data = old_train)
+summary(logit_model)
